@@ -1,4 +1,17 @@
 console.log("INFO: Making a request");
+
+window.onload = function(){
+    let caloriesLeft  = 2410;
+    document.getElementById("daily-goal").textContent = caloriesLeft + " kcal";
+    document.getElementById("remaining").textContent = caloriesLeft;
+}
+
+
+
+
+
+
+
 let serverUrl = "http://localhost:8100/"
 fetch(serverUrl, {
         method: "GET",

@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calorie Tracker</title>
 </head>
 <script src="script.js"></script>
 <body>
     <p>Server started</p>
+    <div class="container">
+    <header>
+      <h1>Calorie Tracker</h1>
+      <div class="goal">Daily goal: <span id="daily-goal"></div>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h2>Today’s summary</h2>
+        <div class="stat">
+          <div>
+            <div>Consumed: <span id="consumed">0</span> kcal</div>
+            <div>Remaining: <span id="remaining"></span> kcal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Add food</h2>
+        <form id="add-form">
+          <input type="text" id="food-name" placeholder="Food name" required />
+          <input type="number" id="food-calories" placeholder="Calories" required />
+          <input type="number" id="food-servings" placeholder="Number of servings" required />
+          <select id="meal-type">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="card list">
+      <h2>Food log</h2>
+      <div id="items"></div>
+        <button class="secondary" id="set-goal">Set daily goal</button>
+      </div>
+    </section>
+
+  </div>
+
+
 </body>
 </html>
