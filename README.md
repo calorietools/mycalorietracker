@@ -13,7 +13,7 @@ Calorie tracking website.
 
 ## Getting started
 1. Ensure that you have docker installed.
-2. Download compose.yaml from this repo
+2. Download [compose.yaml](https://github.com/calorietools/mycalorietracker/blob/20a36f263d84fe137d106ec8684e1bcb47566bc4/compose.yaml) from this repo.
 3. Run the following command in the same directory as the compose file:
 
 ```
