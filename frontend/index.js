@@ -66,3 +66,10 @@ const makeFoodSummaryRequest = () => {
         console.log(error)
     })    
 }
+
+const populateActivityMeter = (data) => {
+    document.getElementById("supplied").innerHTML = data[0].totalfoodcalorie;
+    document.getElementById("burned").innerHTML = data[1].totalexercisecalorie;
+    let goal = (data[2].caloriegoal - parseInt(data[1].totalexercisecalorie)) + parseInt(data[0].totalfoodcalorie);
+    document.getElementById("goal").innerHTML = goal;
+}
