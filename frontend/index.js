@@ -73,3 +73,16 @@ const populateActivityMeter = (data) => {
     let goal = (data[2].caloriegoal - parseInt(data[1].totalexercisecalorie)) + parseInt(data[0].totalfoodcalorie);
     document.getElementById("goal").innerHTML = goal;
 }
+
+const populateRecentExercise = (data) => {
+    data.forEach(element => {
+        let temp = document.getElementsByTagName("template")[0];
+        let clon = temp.content.cloneNode(true);
+        let appender = document.getElementsByClassName("recent-ex-cont")[0];
+
+        clon.querySelector("p").innerText = element.exercisename;
+        clon.querySelector("span").innerText = element.exercisetype;
+        clon.querySelector(".ex-end").innerText = element.caloriecount+" kcal";
+        appender.appendChild(clon);
+    });
+}
