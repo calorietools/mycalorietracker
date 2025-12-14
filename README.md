@@ -13,10 +13,10 @@ Calorie tracking website.
 
 ## Getting started
 1. Ensure that you have docker installed.
-2. Clone this repo to your local machine.
-3. Run the following command in the project directory:
+2. Download compose.yaml from this repo
+3. Run the following command in the same directory as the compose file:
 
 ```
-docker compose up --build
+docker compose up
 ```
 You should now be able to access the website on port 80. By default the API runs on port 8100 and the db on 5432.
