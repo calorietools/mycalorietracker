@@ -50,3 +50,16 @@ app.get('/api/v1/caloriestats/:id/:date', (req, res) => {
       res.send(data);
   })
 });
+
+app.get('/api/v1/food/:id/:date', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.type('application/json');
+
+  const id = req.params.id;
+  const date = req.params.date;
+  let foodquery = `SELECT * FROM food WHERE UserID = ${id} AND CAST(DiaryDate AS DATE) = '${date}'`;
+
+  generalQuery(foodquery).then(data => {
+      res.send(data);
+  })
+});
