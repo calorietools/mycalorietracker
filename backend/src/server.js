@@ -76,3 +76,16 @@ app.get('/api/v1/exercise/:id/:date', (req, res) => {
       res.send(data);
   })
 });
+
+
+app.get('/api/v1/profile/:id', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.type('application/json');
+
+  const id = req.params.id;
+  let profilequery = `SELECT * FROM users WHERE ID = ${id}`;
+
+  generalQuery(profilequery).then(data => {
+      res.send(data);
+  })
+});
