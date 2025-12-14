@@ -91,3 +91,8 @@ body {
 .meter-small {
     font-size: 20px;
 }
+
+.meter-heading h2{
+    margin-left: 5px;
+    display: inline-block;
+}
