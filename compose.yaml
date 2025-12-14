@@ -1,0 +1,34 @@
+services:
+  calorie_api:
+    image: ghcr.io/ismaeelahmed24/calorie_api:main
+    container_name: calorie_api
+    ports:
+      - "8100:8100"
+    depends_on:
+      calorie_db:
+        condition: service_healthy
+  calorie_frontend:
+    image: ghcr.io/ismaeelahmed24/calorie_frontend:main
+    container_name: calorie_frontend
+    ports:
+      - "80:80"
+  calorie_db:
+    image: ghcr.io/ismaeelahmed24/calorie_db:main
+    container_name: calorie_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: caloriedb
+    ports:
+      - "5432:5432"
+    volumes:
+      - data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
+
+volumes:
+  data:
