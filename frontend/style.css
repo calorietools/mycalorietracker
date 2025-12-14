@@ -56,3 +56,12 @@ body {
     font-size: 70px;
     font-weight: 475;
 }
+
+.meter {
+    margin-top: 24px;
+    background-color: #EBEFE7;
+    height: 250px;
+    width: calc(100vw - 206px);
+    padding: 24px;
+    border-radius: 10px;
+}
