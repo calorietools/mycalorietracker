@@ -8,3 +8,12 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #f6fbf3;
 }
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #DCE5DA;
+    width: 110px;
+    height: 100vh;
+    flex-shrink: 0;
+}
