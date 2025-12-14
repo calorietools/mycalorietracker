@@ -89,3 +89,7 @@ app.get('/api/v1/profile/:id', (req, res) => {
       res.send(data);
   })
 });
+
+app.listen(port, () => {
+  console.log(`Listening at http://localhost:${port}`);
+});
