@@ -161,3 +161,8 @@ body {
 .ex-icon {
     display: flex;
 }
+
+.ex-icon p {
+    margin-left: 5px;
+    margin-top: 4px;
+}
