@@ -63,3 +63,16 @@ app.get('/api/v1/food/:id/:date', (req, res) => {
       res.send(data);
   })
 });
+
+app.get('/api/v1/exercise/:id/:date', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.type('application/json');
+
+  const id = req.params.id;
+  const date = req.params.date;
+  let exercisequery = `SELECT * FROM exercise WHERE UserID = ${id} AND CAST(DiaryDate AS DATE) = '${date}'`;
+
+  generalQuery(exercisequery).then(data => {
+      res.send(data);
+  })
+});
