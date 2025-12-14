@@ -78,3 +78,16 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
+.meter-item {
+    text-align: center;
+}
+
+.meter-large {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.meter-small {
+    font-size: 20px;
+}
