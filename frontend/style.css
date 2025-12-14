@@ -133,3 +133,10 @@ body {
     border-radius: 10px;
     padding: 24px;
 }
+
+.recent-ex-cont {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
