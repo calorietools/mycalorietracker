@@ -104,3 +104,12 @@ body {
     width: calc(100vw - 160px);
     border-radius: 10px;
 }
+
+.recent-ex {
+    flex: 1 1 50%;
+    margin-right: 24px;
+    height: 85%;
+    background-color: #EBEFE7;
+    border-radius: 10px;
+    padding: 24px;
+}
