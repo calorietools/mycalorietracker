@@ -188,3 +188,7 @@ body {
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
+.food-item span {
+    size: 48px;
+}
