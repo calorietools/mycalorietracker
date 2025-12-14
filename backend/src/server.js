@@ -22,3 +22,19 @@ const computeCalorieStats = async (id, date) => {
   
   return foodTotal.rows.concat(exerciseTotal.rows, calorieGoal.rows);
 }
+
+const generalQuery = async (query) => {
+    const client = new Client({  
+    user: 'postgres',
+    password: 'mysecretpassword',
+    host: 'calorie_db',
+    port: 5432,
+    database: 'caloriedb',});
+
+    await client.connect();
+
+    const data = await client.query(query);
+
+    await client.end();
+    return data.rows;
+}
