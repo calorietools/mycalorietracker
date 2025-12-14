@@ -166,3 +166,11 @@ body {
     margin-left: 5px;
     margin-top: 4px;
 }
+
+.food-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 20px;
+}
