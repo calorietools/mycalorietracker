@@ -40,3 +40,19 @@ body {
     margin-top: 24px;
     margin-right: 24px;
 }
+
+.header {
+    display: flex;
+}
+
+.title-card {
+    background-color: #EBEFE7;
+    padding: 56px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.title-card h1 {
+    font-size: 70px;
+    font-weight: 475;
+}
