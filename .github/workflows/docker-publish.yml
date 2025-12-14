@@ -1,7 +1,7 @@
 name: Build & publish images
 on:
   push:
-    branches: ["main"]
+    branches: ["release"]
 
 env:
   REGISTRY: ghcr.io
