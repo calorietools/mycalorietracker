@@ -16,13 +16,13 @@ jobs:
         include:
           - dockerfile: ./frontend/Dockerfile
             context: ./frontend
-            image: ghcr.io/ismaeelahmed24/calorie_frontend
+            image: ghcr.io/calorietools/calorie_frontend
           - dockerfile: ./backend/Dockerfile
             context: ./backend
-            image: ghcr.io/ismaeelahmed24/calorie_api
+            image: ghcr.io/calorietools/calorie_api
           - dockerfile: ./db/Dockerfile
             context: ./db
-            image: ghcr.io/ismaeelahmed24/calorie_db
+            image: ghcr.io/calorietools/calorie_db
     permissions:
       contents: read
       packages: write
