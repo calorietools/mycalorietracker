@@ -17,3 +17,13 @@ body {
     height: 100vh;
     flex-shrink: 0;
 }
+
+.sidebar-item {
+    padding-top: 24px;
+    text-align: center;
+    align-content: center;
+}
+
+.sidebar-item span {
+    margin-bottom: 8px;
+}
