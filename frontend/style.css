@@ -96,3 +96,11 @@ body {
     margin-left: 5px;
     display: inline-block;
 }
+
+.recent {
+    display: flex;
+    margin-top: 24px;
+    height: 250px;
+    width: calc(100vw - 160px);
+    border-radius: 10px;
+}
