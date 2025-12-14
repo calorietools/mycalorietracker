@@ -38,3 +38,15 @@ const generalQuery = async (query) => {
     await client.end();
     return data.rows;
 }
+
+app.get('/api/v1/caloriestats/:id/:date', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.type('application/json');
+
+  const id = req.params.id;
+  const date = req.params.date;
+  
+  computeCalorieStats(id, date).then(data => {
+      res.send(data);
+  })
+});
