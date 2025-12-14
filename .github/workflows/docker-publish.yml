@@ -15,13 +15,13 @@ jobs:
       matrix:
         include:
           - dockerfile: ./frontend/Dockerfile
-            context: "{{defaultContext}}:frontend"
+            context: ./frontend
             image: ghcr.io/ismaeelahmed24/calorie_frontend
           - dockerfile: ./backend/Dockerfile
-            context: "{{defaultContext}}:backend"
+            context: ./backend
             image: ghcr.io/ismaeelahmed24/calorie_api
           - dockerfile: ./db/Dockerfile
-            context: "{{defaultContext}}:db"
+            context: ./db
             image: ghcr.io/ismaeelahmed24/calorie_db
     permissions:
       contents: read
