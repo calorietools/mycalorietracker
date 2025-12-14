@@ -125,3 +125,11 @@ body {
     display: inline;
     font-weight: 475;  
 }
+
+.recent-food {
+    flex: 1 1 50%;
+    background-color: #EBEFE7;
+    height: 85%;
+    border-radius: 10px;
+    padding: 24px;
+}
