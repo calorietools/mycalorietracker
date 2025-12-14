@@ -15,10 +15,13 @@ jobs:
       matrix:
         include:
           - dockerfile: ./frontend/Dockerfile
+            context: "{{defaultContext}}:frontend"
             image: ghcr.io/ismaeelahmed24/calorie_frontend
           - dockerfile: ./backend/Dockerfile
+            context: "{{defaultContext}}:backend"
             image: ghcr.io/ismaeelahmed24/calorie_api
           - dockerfile: ./db/Dockerfile
+            context: "{{defaultContext}}:db"
             image: ghcr.io/ismaeelahmed24/calorie_db
     permissions:
       contents: read
@@ -44,7 +47,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          context: .
+          context: ${{ matrix.context }}
           file: ${{ matrix.dockerfile }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
