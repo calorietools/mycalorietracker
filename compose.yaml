@@ -1,6 +1,6 @@
 services:
   calorie_api:
-    image: ghcr.io/ismaeelahmed24/calorie_api:main
+    image: ghcr.io/calorietools/calorie_api:release
     container_name: calorie_api
     ports:
       - "8100:8100"
@@ -8,12 +8,12 @@ services:
       calorie_db:
         condition: service_healthy
   calorie_frontend:
-    image: ghcr.io/ismaeelahmed24/calorie_frontend:main
+    image: ghcr.io/calorietools/calorie_frontend:release
     container_name: calorie_frontend
     ports:
       - "80:80"
   calorie_db:
-    image: ghcr.io/ismaeelahmed24/calorie_db:main
+    image: ghcr.io/calorietools/calorie_db:release
     container_name: calorie_db
     environment:
       POSTGRES_USER: postgres
