@@ -65,3 +65,16 @@ body {
     padding: 24px;
     border-radius: 10px;
 }
+
+.meter h2 {
+    font-size: 26px;
+    font-weight: 475;
+}
+
+.meter-components {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
