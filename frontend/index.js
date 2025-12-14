@@ -126,3 +126,9 @@ const populateFoodSummary = (data) => {
     clon.querySelector("#kcal").innerText = dinnercount+" kcal";
     appender.appendChild(clon);
 }
+
+window.onload = (event) => {
+  makeActivityMeterRequest();
+  makeRecentExerciseRequest();
+  makeFoodSummaryRequest();
+};
