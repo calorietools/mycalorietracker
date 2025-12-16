@@ -5,6 +5,7 @@ CREATE TABLE users (
     Email varchar(255),
     Age int,
     UserWeight int,
+    goalWeight int,
     CalorieGoal int,
     PRIMARY KEY (ID)
 );
