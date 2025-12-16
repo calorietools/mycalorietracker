@@ -34,6 +34,40 @@
                 </button>
             </div>
         </div>
+
+
+    
+
+    <section class="cards">
+
+      <div class="card">
+        <h2 id = "addFood">Add food</h2>
+        <form id="add-form">
+          <input type="text" id="food-name" placeholder="Food name" required />
+          <input type="number" id="food-calories" placeholder="Calories per serving (kcal)" min="0" step="1" required />
+          <input type="number" id="servings" placeholder="Number of servings" min="0" step="1" required />
+          <select id="meal-type">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="card list">
+      <h2>Food log</h2>
+      <div id="items"></div>
+      <div style="display:flex; gap:8px; margin-top:12px;">
+        <button class="secondary" id="set-goal">Set daily goal</button>
+        <button class="secondary" id="reset-day">Reset day</button>
+      </div>
+    </section>
+
+  </div>
+
     </div>
 </body>
 </html>
