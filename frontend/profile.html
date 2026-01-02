@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="sidebar-item">
+                <a href = "index.html">
+                    <button class = "sidebar-button" style = "background-color: #DCE5DA";>
+                        <span class="material-symbols-outlined">home</span>
+                        <p>Home</p>
+                    </button>
+                </a>              
+            </div>
+            <div class="sidebar-item">
+                <a href = "foodDiary.html">
+                    <button class = "sidebar-button" style = "background-color: #DCE5DA"; >
+                        <span class="material-symbols-outlined">book</span>
+                        <p>Food Diary</p>
+                    </button>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <button class = "sidebar-button" style = "background-color: #DCE5DA";>
+                    <span class="material-symbols-outlined">account_circle</span>
+                    <p>Profile</p>
+                </button>
+            </div>
+        </div>
+
+        <main>
+    <!-- Authentication section -->
+    <section class="section" id="auth-section">
+      <div class="two-column">
+        <!-- Login -->
+        <div>
+          <h2>Login</h2>
+          <form id="login-form" action="/login" method="post">
+            <div class="form-group">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" required />
+            </div>
+
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
+        <!-- Create account -->
+        <div>
+          <h2>Create an account</h2>
+          <form id="signup-form" action="/signup" method="post">
+            <div class="form-group">
+              <label for="signup-name">Full name</label>
+              <input type="text" id="signup-name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-email">Email</label>
+              <input type="email" id="signup-email" name="email" required />
+            </div>
+
+            <div class="inline-fields">
+              <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="password" required />
+              </div>
+
+              <div class="form-group">
+                <label for="signup-confirm-password">Confirm password</label>
+                <input type="password" id="signup-confirm-password" name="confirm_password" required />
+              </div>
+            </div>
+
+            <div class="inline-fields">
+              <div class="form-group">
+                <label for="signup-current-weight">Current weight (kg)</label>
+                <input type="number" step="0.1" id="signup-current-weight" name="current_weight" />
+              </div>
+
+              <div class="form-group">
+                <label for="signup-goal-weight">Goal weight (kg)</label>
+                <input type="number" step="0.1" id="signup-goal-weight" name="goal_weight" />
+              </div>
+            </div>
+
+            <button type="submit">Create account</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile & weights (assumes user is logged in) -->
+    <section class="section" id="profile-section">
+      <h2>Profile</h2>
+      <div class="profile-info">
+        <!-- In a real app, these would be rendered from server/user data -->
+        <p><strong>Name:</strong> <span id="profile-name">John Doe</span></p>
+        <p><strong>Email:</strong> <span id="profile-email">john.doe@example.com</span></p>
+        <p><strong>Current weight:</strong> <span id="current-weight">82.5</span> kg</p>
+        <p><strong>Goal weight:</strong> <span id="goal-weight">75.0</span> kg</p>
+        <p class="small-text">These values would be populated from your account data.</p>
+      </div>
+    </section>
+
+    <!-- Change password -->
+    <section class="section" id="change-password-section">
+      <h2>Change password</h2>
+      <form id="change-password-form" action="/change-password" method="post">
+        <div class="form-group">
+          <label for="current-password">Current password</label>
+          <input type="password" id="current-password" name="current_password" required />
+        </div>
+
+        <div class="inline-fields">
+          <div class="form-group">
+            <label for="new-password">New password</label>
+            <input type="password" id="new-password" name="new_password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-new-password">Confirm new password</label>
+            <input type="password" id="confirm-new-password" name="confirm_new_password" required />
+          </div>
+        </div>
+
+        <button type="submit">Update password</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+
+    </div>
+</body>
+

@@ -1,3 +1,5 @@
+/* index page */
+
 html,body,div,section,article,aside,header,footer,nav,h1,h2,h3,h4,h5,h6,p,em,strong,img,ol,ul,li {
     margin: 0;
     padding: 0;
@@ -195,8 +197,11 @@ body {
 
 
 
+
+
+/* food diary section */
 .card {
-    background: #e5e5e7;
+    background: #EBEFE7;
     border-radius: 20px;
     padding: 20px; 
     border: 1px solid #BDEAF5;
@@ -270,6 +275,112 @@ button.secondary {
     font-weight: 600;
     color: #3b82f6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.section {
+    background-color: #EBEFE7;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    border: 1px solid #DCE5DA;
+    width: calc(100vw - 200px);
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+
+.section h2 {
+    font-size: 26px;
+    font-weight: 475;
+    margin-bottom: 16px;
+}
+
+
+.two-column {
+    display: flex;
+    gap: 32px;
+}
+
+.two-column > div {
+    flex: 1;
+}
+
+/* Form layout */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+
+.form-group input {
+    padding: 14px 10px;
+    font-size: 1rem;
+    background: #BDEAF5;
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.inline-fields {
+    display: flex;
+    gap: 16px;
+}
+
+.inline-fields .form-group {
+    flex: 1;
+}
+
+
+button[type="submit"] {
+    padding: 14px 20px;
+    font-size: 1rem;
+    background-color: #BDEAF5;
+    border: 1px solid #d1d1d6;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+    background-color: #A5D9E8;
+}
+
+
+.profile-info {
+    background-color: #BDEAF5;
+    border: 1px solid #e5e5e7;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+.profile-info p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+
+
+
+
 
 
 
